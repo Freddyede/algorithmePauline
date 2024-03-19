@@ -8,10 +8,9 @@ const scanAndFind = (array, objectToFind) => {
         ) {
             if(array[i]['id']) {
                 array[i]['id'] = objectToFind[key];
-            }else if(array[i]['identification']) {
+            } else if(array[i]['identification']) {
                 array[i]['identification'] = objectToFind[key];
-            }
-            else {
+            } else {
                 array[i]['code'] = objectToFind[key];
             }
         } else if(array[i][key]) {
