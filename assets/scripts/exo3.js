@@ -8,7 +8,7 @@ function getLongestWord(sentence) {
     }
   }
 
-  return longestWord;
+  return longestWord.split('').length;
 }
 
 console.log(getLongestWord("Du sublime, au ridicule il n'y a qu'un pas."));
