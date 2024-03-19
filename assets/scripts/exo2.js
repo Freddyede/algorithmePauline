@@ -1,3 +1,26 @@
+const scanAndFind = (array, objectToFind) => {
+    let key = Object.keys(objectToFind).toString();
+    for (let i = 0; i < array.length; i++) {
+        if(
+            Number.isInteger(array[i]['id']) ||
+            Number.isInteger(array[i]['identification']) ||
+            Number.isInteger(array[i]['code'])
+        ) {
+            if(array[i]['id']) {
+                array[i]['id'] = objectToFind[key];
+            } else if(array[i]['identification']) {
+                array[i]['identification'] = objectToFind[key];
+            } else {
+                array[i]['code'] = objectToFind[key];
+            }
+        } else if(array[i][key]) {
+            array[i][key] = objectToFind[key];
+        }
+    }
+    return array;
+}
+
+
 console.log(
     scanAndFind(
         [

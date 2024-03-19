@@ -1,4 +1,4 @@
-function abbreviation(fullname) {
+function abreviation(fullname) {
   let namesArray = fullname.split(" ");
   let lastNameAbbreviation =
     namesArray[namesArray.length - 1][0].toUpperCase() + ".";
